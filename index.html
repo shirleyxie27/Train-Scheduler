@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>Train Schedule</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!-- Link for CSS --> 
+  <!-- <link rel="stylesheet" type="text/css" href="./assets/css/reset.css"> -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+  <!-- Link for Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/3.7.1/firebase.js"></script>
+  <!-- Moment.js Reference -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
+  <!-- Font Awesome CSS Icons -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+</head>
+
+
+<body>
+
+<div class="container main-container">
+  <div class="jumbotron">
+      
+      <h1><i class="fa fa-train" aria-hidden="true"></i>Anytime is Train Time</h1>
+      <h2>Choo Choo. Chee Chee</h2>
+      <h3 id="userTime">Your current time: </h3>
+      <button id="refresh" type="button" class="btn btn-primary btn-md" onClick="window.location.reload()">Refresh</button>
+  </div>
+
+  <div class="panel panel-default panel-primary">
+    <div id="train-schedule" class="panel-heading">Current Train Schedule</div>
+        <div class="panel-body">
+           <div class="table-responsive">          
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th>Train Name</th>
+                      <th>Destination</th>
+                      <th>Frequency (min)</th>
+                      <th>Next Arrival</th>
+                      <th>Minutes Away</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                  </tbody>
+                </table>
+            </div>
+        </div>
+  </div>
+
+  <div class="panel panel-default panel-primary">
+    <div class="panel-heading">Add Train</div>
+    <div class="panel-body">
+      <form>
+        <div class="form-group">
+          <label for="name">Train Name</label>
+          <input type="text" class="form-control" id="name" placeholder="Enter your train name...">
+        </div>
+        <div class="form-group">
+          <label for="role">Destination</label>
+          <input type="text" class="form-control" id="destination" placeholder="Your destination...">
+        </div>
+
+        <div class="form-group">
+          <label for="rate">First Train Time</label>
+          <input type="time" class="form-control" id="first-train-time"  placeholder="Your first train time is...">
+        </div>
+
+        <div class="form-group">
+          <label for="rate">Frequency (min)</label>
+          <input type="number" class="form-control" id="frequency" placeholder="Frequency...">
+        </div>
+       
+        <button type="submit" class="btn btn-primary submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</div>
+<script type="text/javascript" src="./assets/javascript/app.js"></script>
+
+
+</body>
+
+</html>
